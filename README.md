@@ -19,12 +19,12 @@ These offers can currently be taken on PiNoddeXMR from our terminal menu. Here s
 
 setup.sh loads a menu:
 
-	> "1)" "Exit to Command line" \
-  > "2)" "System Settings" \
-	> "3)" "Update Tools" \
-	> "4)" "Node Tools" \
-	> "5)" "Atomic Swap" \
-	> "6)" "Extra Network Tools" 2>&1 >/dev/tty)
+	 "1)" "Exit to Command line" \
+  	 "2)" "System Settings" \
+	 "3)" "Update Tools" \
+	 "4)" "Node Tools" \
+	 "5)" "Atomic Swap" \
+	 "6)" "Extra Network Tools" 2>&1 >/dev/tty)
 
 Lines 491 - 614 show current atomic swap functions to be implemented into this UI
 https://github.com/shermand100/AtomicSwap_UI/blob/main/home/pinodexmr/setup.sh#L491 to 614
