@@ -1,0 +1,92 @@
+[
+  {
+    "peerID": "12Test1oWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0x6cTest12e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12DTest23KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0x6Test2c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12DTest33KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest36c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test4D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest46c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test5D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest56c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test6D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest66c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test7D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest76c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test8D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest86c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test9D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest96c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  },
+  {
+    "peerID": "12Test10D3KooWND3yZH3XQxUkEn21HfQW6djigkpMieFqpBXw6mDiWF6c",
+    "offerID": "0xTest106c2e546becb5f6a24d79fdce6749627c8bda320cc260d7fad9fbfafa5b8984ef",
+    "provides": "XMR",
+    "minAmount": "0.2",
+    "maxAmount": "0.6",
+    "exchangeRate": "0.077168",
+    "ethAsset": "ETH"
+  }
+]
