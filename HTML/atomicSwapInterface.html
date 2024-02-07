@@ -51,9 +51,23 @@
 .card p {
     margin: 10px 0;
 }
+
+.btn {
+    margin: 10px 0;
+    margin-left: 20%;
+    width: 60%;
+}
+
+/* Remove up/down arrows on number box's */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 </style>
 </head>
 
+<!-- <body onload="fetchData();setInterval(fetchData, 20000);renderData();setInterval(renderData, 20000);"> -->
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="index.html"><i class="fab fa-monero"></i> PiNode-XMR</a>
@@ -125,7 +139,8 @@
             <hr>
 
         <h2 class="font-weight-bold">Available Offers <small>ETH-XMR Atomic Swaps</small></h2>
-
+        <p>Offers data refreshes in: <span id="timer"></span></p>
+        
       </div> <!-- col -->
     </div> <!-- row -->
   </div> <!-- /container -->
@@ -187,13 +202,13 @@ async function renderData() {
         _provides.textContent = 'Provides: ' + item.provides;
 
         const _minAmount = document.createElement('p');
-        _minAmount.textContent = 'Min Qty: ' + item.minAmount;
+        _minAmount.textContent = 'Min Qty: ' + item.minAmount + ' XMR';
 
         const _maxAmount = document.createElement('p');
-        _maxAmount.textContent = 'Max Qty: ' + item.maxAmount;
+        _maxAmount.textContent = 'Max Qty: ' + item.maxAmount + ' XMR';
 
         const _exchangeRate = document.createElement('p');
-        _exchangeRate.textContent = 'Exchange Rate: ' + item.exchangeRate + 'Eth to 1 XMR';
+        _exchangeRate.textContent = 'Exchange Rate: ' + item.exchangeRate + ' Eth to 1 XMR';
 
         const _ethAsset = document.createElement('p');
         _ethAsset.textContent = 'Eth Asset: ' + item.ethAsset;
@@ -203,7 +218,40 @@ async function renderData() {
         // _btn.id = 'btn_id'
         // _btn.innerText = "Take Offer";
         // _btn.className += 'btn btn-block btn-lg btn-dark';
-      
+
+
+        // Create 'number box' element for take user swap qty.
+        const _takeQty = document.createElement('input');
+        _takeQty.setAttribute("type", "number");
+        _takeQty.className += 'btn btn-block btn-light';
+        _takeQty.setAttribute("placeholder", "Enter quantity of ETH to provide to this swap contract");
+        _takeQty.addEventListener("change", (event) => {
+          if ( event.target.value < (item.minAmount * item.exchangeRate)){ // Check value of Eth above or equal market makers minimum XMR value
+            alert("You must send ETH value greater than or equal to swap providers XMR minimum")
+          } else if (event.target.value > (item.maxAmount * item.exchangeRate)){ // Check value of Eth below or equal market makers maximum XMR value !Throwing complaint if sum is equal? Unexpected!
+            alert("You must send ETH value less than or equal to swap providers XMR maximum")
+          } else {
+            _takeQty.value = event.target.value;
+          const expectedXMR = event.target.value / item.exchangeRate
+          if (confirm('Offer Review:\nAt exchange rate of ' + item.exchangeRate + '\nYou providing ' + _takeQty.value + 'ETH will result in you receiving ' + expectedXMR + 'XMR')) {
+          //If user say 'yes' to confirm
+          console.log('Swap is confirmed - Step 1');
+              if (confirm('Are you Really really sure?')) {
+              console.log('Swap is confirmed - Step 2');
+              } else {
+              //If user say 'no' and cancelled the action
+              console.log('Swap is cancelled - Step 2');
+              }
+              console.log(_takeQty.value)
+          } else {
+           //If user say 'no' and cancelled the action
+           console.log('Swap is cancelled - step 1');
+           }
+            console.log(_takeQty.value)
+          }
+          });
+        
+
         card.appendChild(_peerID);
         card.appendChild(_offerID);
         card.appendChild(_provides);
@@ -211,9 +259,29 @@ async function renderData() {
         card.appendChild(_maxAmount);
         card.appendChild(_exchangeRate);
         card.appendChild(_ethAsset);
+        card.appendChild(_takeQty);
         // card.appendChild(_btn);
         container.appendChild(card);
     });
+
+    var count=120;
+
+    var counter=setInterval(timer, 1000);
+    function timer()
+    {
+      count=count-1;
+      if (count <= 0)
+      {
+        clearInterval(counter);
+        return;
+      }
+
+      document.getElementById("timer").innerHTML=count + " secs";
+    }
+
+    setTimeout(function(){
+   window.location.reload(true);
+}, 120000);
 }
 
 // Call the renderData function to display data
